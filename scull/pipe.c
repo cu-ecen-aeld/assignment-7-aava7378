@@ -35,6 +35,10 @@
 
 #include "scull.h"		/* local definitions */
 
+#ifndef no_llseek
+#define no_llseek noop_llseek
+#endif
+
 struct scull_pipe {
         wait_queue_head_t inq, outq;       /* read and write queues */
         char *buffer, *end;                /* begin of buf, end of buf */

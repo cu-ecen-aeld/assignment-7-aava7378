@@ -4,6 +4,13 @@
 #include <linux/version.h>
 #include <linux/uaccess.h>
 
+#ifndef VERIFY_READ
+#define VERIFY_READ  0
+#endif
+#ifndef VERIFY_WRITE
+#define VERIFY_WRITE 1
+#endif
+
 /*
  * access_ok() signature changed across kernel versions.
  *
